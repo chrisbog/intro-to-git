@@ -19,6 +19,7 @@ Therefore, the direct url for this would be:
 ### Logging into github
 
 Go to the [http://www.github.com](http://www.github.com).   You will see the following screen:
+
 ![](img/login.png)
 
 Once you log into with your username and password, you should see all the repositories that you have created.   In the upper right hand corner there is a '+' sign.   If you click on that symbol, it will take you to the following screen:
@@ -78,3 +79,4 @@ Congratulations!   We just finished our first lesson on creating a repository an
 
 * [Next lesson](../lesson2/lesson2.md)
 * [Back to table of contents](../README.md)
+

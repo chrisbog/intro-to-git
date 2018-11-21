@@ -224,7 +224,7 @@ If you click on the **Branch: release** button and select the **master** branch,
 
 ![](img/masterbranchafterrelease.png)
 
-##Conclusion
+## Conclusion
 Well, congratulations.   In this lesson we learned the basics of creating a feature branch and using the workflows built in to github to create the pull request and merge the changes into the master branch.
 
 * [Back to table of contents](../README.md)
