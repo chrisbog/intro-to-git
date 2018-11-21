@@ -1,4 +1,4 @@
-#Introduction to GIT
+# Introduction to GIT
 ## Introduction
 In the age of programmability, git and github becomes an awesome resource for version control.   While the normal use for both of these tools is for software development, there is a great number of other uses as well.
 
@@ -19,7 +19,7 @@ git is provided via several methods.
 * OSX - git is provided by the Mac OSX package called XCode.  most OSX installations do not have XCode installed by default.   Therefore you can install it via the App Store.
 * Windows - git is provided free of charge at the following link [https://www.atlassian.com/git/tutorials/install-git](). Once you download and install it, you will be able to leverage git on Windows.
 
-###github
+### github
 github is a hosting service for git repositories.  There are multiple providers of repositiories that work with git.   However, git is really used by alot of people.
 
 Installation can also be a on-premise repositories.   This is useful for customers that would like to maintain their own repositories. Obviously corporations down want to publish their proprietary source code in the public.  However, the public github is used by millions so users can share and work on each others source code.
