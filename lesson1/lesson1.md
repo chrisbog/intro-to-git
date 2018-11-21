@@ -1,5 +1,6 @@
-#Lesson 1
-##Creating my first git repository
+# Lesson 1
+
+## Creating my first git repository
 
 The first step is to go to github.   If you don't already have an account, you will need to create one.   However the URL for this is:
 
@@ -15,7 +16,8 @@ Therefore, the direct url for this would be:
 
 `http://github.com/chrisbog/testproject`
 
-###Logging into github
+### Logging into github
+
 Go to the [http://www.github.com](http://www.github.com).   You will see the following screen:
 ![](img/login.png)
 
@@ -65,7 +67,7 @@ Let's step through these one by one:
 *  `git add README.md` - This command is adding the file README.md to the staging area.   You can use any type of wildcards for this command as well.   However, I would be very concerned about using wildcards to ensure that we don't accidentally add a file that we might not want into source control.
 *  `git commit -m "first commit"` - This commands creates a comment as to the first commit.   Therefore, all the files that we added to the staging area will basically be tagged with a description.   This will make it helpful when we look at the history of a file to understand what was changed.
 *  `git remote add origin https://github.com/chrisbog/testproject.git` - This command is very important.  This command actually makes a connection between our local computer directory and the remote repository that we created.   Once this command is entered, we can start pushing code both ways.
-*  ``git push -u origin master` - This command actually initiates the push of the changes from our local directory up to the repository.   We are specifying the "master" keyword.   This represents what branch of the repository we are going to push these changes.    Don't worry about this yet because we will cover it more later.
+*  `git push -u origin master` - This command actually initiates the push of the changes from our local directory up to the repository.   We are specifying the "master" keyword.   This represents what branch of the repository we are going to push these changes.    Don't worry about this yet because we will cover it more later.
 
 Now let's go back to our previous repo in github and refresh it.   You should now see the following:
 ![](img/repo-wnewfile.png)

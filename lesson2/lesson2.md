@@ -1,4 +1,4 @@
-#Lesson 2
+# Lesson 2
 ## Managing a branch workflow for people working in groups
 Where the power of git and github comes in is the ability for use to manage a project while multiple people are working on it.   In this tutorial, we are going to have a single person helping to to update the source code.
 
