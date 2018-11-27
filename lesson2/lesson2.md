@@ -1,28 +1,28 @@
 # Lesson 2
 ## Managing a branch workflow for people working in groups
-Where the power of git and github comes in is the ability for use to manage a project while multiple people are working on it.   In this tutorial, we are going to have a single person helping to to update the source code.
+Where the power of git and github comes in is the ability for use to manage a project while multiple people are working on it.   In this tutorial, we are going to simulate a single developer working on this project.
 
-The workflow that i'm going to follow very closely mimics the following graphic.   In this graphic, we are going to have a master branch of our software development effort.    From this master branch, we are going to have multiple developers working on this product.
+The workflow that i'm going to follow very closely mimics a piece of the following graphic.   In this graphic, we are going to have a master branch of our software development effort.    From this master branch, we are going to have multiple developers working on this product.
 
 ![Test](img/overall-workflow.png "Optional Title")
 
 In future examples, we will see more detailed examples on how people can work on the same project.
 
 ## Release methodology
-So when working on a project as a group, what is the best way to work together on the same project.   After reading alot of topics, on the issue, I really like the following workflow.   Not only does this folow github very closely, but it makes alot of sense from a development standpoint.
+So when working on a project as a group, what is the best way to work together on the same project?   After reading alot of documents, on the issue, I really like the following workflow.   Not only does this follow github very closely, but it makes alot of sense from a development standpoint.
 
 We are going to use three different types of releases for this code example:
 
 * production - This is the production code that our customers will be leveraging.
-* release - This is a new release of code that we will be creating.   This might represent different versions that we eventually would be publishing.
+* release - This is a new release of code that we will be creating.   This might represent different versions that we eventually would be publishing.   Think of this as the next version of code.
 * feature - This is the version of our code that we are currently developing on.
 
-The idea is that production is what our customers are using, release is the next version of code, and feature is the individual features within that new version of code.
+The idea is that production is what our customers are using, release is the next version of code, and feature is the individual features within that new release of code.
 
 With this high level methodology, you can create really complex software development projects and have git and github manage the repositories fully.
 
 ## Branching capabilities in git
-So the principal component of this will be leveraging branches in both git and github.   You can think of branches as a independent snapshot of our code where were can make changes, play, experiment, etc and not affect other code.
+So the principal component of this will be leveraging branches in both git and github.   You can think of branches as a independent snapshot of our code where were can make changes, play, and experiment and not affect other code.
 
 By default, when you create a repository in github, it is created in a master branch.  In our example, we are going to leverage the difference branches to mimic our release methodology.
 
@@ -53,7 +53,7 @@ github is now showing what code is displayed in the release branch.  This isn't 
 ### Alternative method to create branch
 Even though we showed you how to create a branch using the web site, you can also create a new branch via the command line.   The following are examples:
 
-Let's first show the current branches that are located within our repository.   When we run this command, the * represents the current selected branch.   We see there is only one branch called master.
+Let's first show the current branches that are located within our repository.   When we run this command, the * represents the current selected branch.   We see there is only one branch called master and the ```*``` next to the branch states that we are currently in the master branch.
 
 ```
 $ git branch
@@ -73,6 +73,9 @@ Let's create the new branch called **release**
 ```
 $ git branch release
 ```
+
+## Synchronize our changes with github
+
 Let's synchronize with github
 
 ```
@@ -133,14 +136,16 @@ $ git branch
   master
   release
 ```
-Now let's create a file called feature1.md.    This file would represent our code that we are currently working on.   You can use any editor to create this file.
+Now let's create a file called feature1.md.    This file would represent our code that we are currently working on.   You can use any editor to create this file.  You can quickly create a file under OSX or linux by doing the following:
+
+```# This is a test file > feature1.md```
 
 Once the file is created, let’s stage the newly created file and add a comment for this commit.
 
 ```
 $ git add feature1.md 
-$ git commit -m "This it the first features that I'm working on"
-[feature 868cd53] This it the first features that I'm working on
+$ git commit -m "This it the first feature that I'm working on"
+[feature 868cd53] This it the first feature that I'm working on
  1 file changed, 5 insertions(+)
  create mode 100644 feature1.md
 ```
@@ -182,7 +187,7 @@ Let's switch to the **feature** branch by clicking on the **Branch: release** bu
 ![](img/switchtofeature.png)
 
 ## Create a pull request to have the changes accepted
-Within the github website, there is something called a pull request.   The pull request is a notification and function to alert the owner of the repository that you are finished with your feature and you want the lead developer to import the changes back into their branch.
+Within the github website, there is a very important process called a pull request.   The pull request is a notification and function to alert the owner of the repository that you are finished with your feature and you want the lead developer to import the changes back into their branch.
 
 Let's click on the **Compare & pull request** button on the previous screen.  In very simple terms the developer that coded the first feature wants to tell the tech lead that they are completed with their changes.   They would like to put the changes back into the main release branch.
 
@@ -192,7 +197,7 @@ Now the developer can write detailed information about the feature  that they ju
 
 In addition, this screen is providing a notification back to the developer that there is the ability to merge this change back into a different branch.   There are two drop down list boxes that allow you to select how to compare this branch with another branch.   In the example we are showing, we would like to use **base: release** as the base branch and we want to compare it to the feature branch: **compare: feature**.   This powerful feature allows us to compare any known branch wth others and see if they can merge easily.
 
-When you scroll down a little further, you can see that differences between the current feature branch and the release branch.   In this example, we are showing that we added a file with 5 different lines.
+When you scroll down a little further, you can see that differences between the current feature branch and the release branch.   In this example, we are showing that we added a file.
 
 ![](img/compare.png)
 
@@ -201,7 +206,7 @@ Once the developer is finished with their documentation, they click on the “Cr
 ## Approving the pull request
 The tech lead or owner of the repository will now get a notification that there is a pull request that they need to act on.    As you can see, it shows that the user **chrisbog* wnats to merge 1 commit into release from feature.   This screen also shows the comments that the user made when they created the pull request.
 
-Very similarily to before, it also tells the tech lead that the branch that we are attempting to merge has no conflicts with the base branch.
+Very similarly to before, it also tells the tech lead that the branch that we are attempting to merge has no conflicts with the base branch.
 
 ![](img/approvepullrequest.png)
 
@@ -225,7 +230,7 @@ If you click on the **Branch: release** button and select the **master** branch,
 ![](img/masterbranchafterrelease.png)
 
 ## Conclusion
-Well, congratulations.   In this lesson we learned the basics of creating a feature branch and using the workflows built in to github to create the pull request and merge the changes into the master branch.
+Well, congratulations!!!   In this lesson we learned the basics of creating a feature branch and using the workflows built in to github to create the pull request and merge the changes into the master branch.
 
 * [Back to table of contents](../README.md)
 
